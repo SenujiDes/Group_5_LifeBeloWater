@@ -1,0 +1,198 @@
+/*navigation bar*/
+.nav-bar {
+    background-color: #000000;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-bar a {
+    display: inline-block;
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-bar a:hover {
+    background-color: #555;
+}
+
+/*Sections*/
+section,
+.fishingpractices-sub {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+section:hover,
+.fishingpractices-sub:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/*main topic*/
+.hope-to-save-corals {
+    margin-top: 150px;
+    margin-bottom: 75px;
+    color: #090000;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+
+/*The animated images which changes automatically*/
+.title {
+    background-size: cover;
+    animation: changeBackground 20s infinite;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+/*To transist images through a time */
+@keyframes changeBackground {
+    0% {
+        background-image: url('../images/coral2.jpg');
+    }
+
+    20% {
+        background-image: url('../images/coralss.jpg');
+    }
+
+    40% {
+        background-image: url('../images/coral3.jpg');
+    }
+
+    60% {
+        background-image: url('../images/coral1.jpg');
+    }
+
+    80% {
+        background-image: url('../images/coral4.jpg');
+    }
+
+    100% {
+        background-image: url('../images/coral6.jpg');
+    }
+}
+
+/*Declaring the size of the box*/
+.topic {
+    margin-top: 200px;
+    margin-bottom: 300px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 0.1px;
+}
+
+/*pharagraph tag*/
+p,
+li {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+/*h2 tag*/
+h2 {
+    margin-left: 30px;
+    font-size: 25px;
+
+}
+
+.image {
+
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    max-width: 30%;
+
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+.save-corals {
+    display: flex;
+}
+
+/*drawing a line*/
+.line {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+.marine-life {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.fishingpractices-sub {
+    margin-right: 20px;
+}
+
+.fishingpractices-sub img {
+    width: 100%;
+    height: 40vw;
+    border-radius: 40px;
+}
+
+.fishingpractices-sub p {
+
+    margin-top: 5px;
+}
+
+.dot {
+    font-size: 0.001px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#back-to-top {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s, color 3s;
+    /*to get a smooth transition*/
+}
+
+#back-to-top:hover {
+    background-color: #333333;
+    /*declaring gthe background color on hover*/
+    color: #ffffff;
+}

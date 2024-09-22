@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/Navigation.css">
+
+</head>
+
+<body>
+
+
+    <div class="shop-page">
+        <div class="title">
+
+            <!--nav bar-->
+            <nav>
+                <b><a href="home.html" class="active">Home</a></b>
+                <b><a href="team.html">About Us</a></b>
+                <b><a href="shop.html">Shop</a></b>
+                <b><a href="feedback.html">Feedback</a></b>
+                <b><a href="gallery.html">Gallery</a></b>
+                <b><a href="sitemap.html">Sitemap</a></b>
+                <b><a href="profile.html">Contact us</a></b>
+
+            </nav>
+
+            <h2 class="shop-title">Oceanic Oasis:<br> Dive, Donate, Delight!</h2>
+            <div class="about-page">
+                <h2 class="shop-page-for">Join the underwater adventure! Dive deep, shop smart, and help protect marine
+                    life. Every purchase
+                    supports our mission to preserve and celebrate the wonders of life below water! </h2>
+            </div>
+            <div class="filter-options" id="filter">
+                <h2>Filter Options</h2>
+                <select id="filterSelect">
+                    <option value="">Select all</option>
+                    <option value="option1">Stationary</option>
+                    <option value="option2">Apparel</option>
+                    <option value="option3">Snack Foods</option>
+                    <option value="option4">Home and Decor</option>
+                    <option value="option5">Health and Care</option>
+                    <option value="option6">Accessories</option>
+                </select>
+            </div>
+
+        </div>
+
+
+        <form>
+            <div class="panes" id="box">
+
+
+                <div class="left-pane" id="left-pane">
+                    <div class="checkout-box">
+                        <p class="checkout-title"> Payment Details</p>
+                        <label for="cardNumber">Card Number:</label> <br>
+                        <input type="text" id="cardNumber" name="cardNumber" class="checkout-input" required>
+                        <span id="cardNumberError" class="error"><!--Validating the Card Number>--></span><br>
+                        <label>Cardholder Name</label><label class="red">*</label><br><input type="text"
+                            id="cardholder-name" class="checkout-input"><br>
+                        <label>Expiry Date</label><label class="red">*</label><br><input type="date" id="date"
+                            class="checkout-input"><br>
+                        <label for="cvv">CVV:</label><br>
+                        <input type="text" id="cvv" name="cvv" class="checkout-input" required>
+                        <span id="cvvError" class="error"><!--Validating CVV--></span><br>
+                        <button onclick=" clearPayment()" class="checkout-button"> Clear Fields</button>
+                        <button class="checkout-button-disable">Save Changes</button>
+                    </div>
+
+
+                    <div class="checkout-box">
+                        <p class="checkout-title"> Billing Address</p>
+                        <label>Address line 1</label><label class="red">*</label><br><input type="text" id="address-1"
+                            class="checkout-input"><br>
+                        <label>Address Line 2</label><br><input type="text" id="adress-2" class="checkout-input"><br>
+                        <label>Address Line 3</label><br><input type="text" id="adress-3" class="checkout-input"><br>
+                        <label>Town/City</label><label class="red">*</label><br><input type="text" id="town"
+                            class="checkout-input"><br>
+                        <label>State/Country</label><br><input type="text" id="state-country"
+                            class="checkout-input"><br>
+                        <label>Postalcode/Zip code</label><label class="red">*</label><br><input type="text" id="zip"
+                            class="checkout-input"><br>
+                        <label>Country</label><label class="red">*</label><br><input type="text" id="country"
+                            class="checkout-input"><br>
+
+                        <button onclick=" clearAdress()" class="checkout-button"> Clear Fields</button>
+                        <button class="checkout-button-disable">Save Changes</button>
+                    </div>
+
+                    <div class="checkout-box">
+                        <p class="checkout-title"> Contact Details</p>
+                        <label>First Name</label><label class="red">*</label><br><input type="text" id="name"
+                            class="checkout-input"><br>
+                        <label>Surname</label><label class="red">*</label><br><input type="text" id="surname"
+                            class="checkout-input"><br>
+                        <label for="phoneNumber">Phone Number:</label><br><!--Validating the phone number-->
+                        <input type="text" id="phoneNumber" name="phoneNumber" class="checkout-input" required>
+                        <span id="phoneNumberError" class="error"></span><br>
+                        <label for="email">Email:</label><br> <!--Email Validation-->
+                        <input type="email" id="email" name="email" required class="checkout-input">
+                        <span id="Error" class="error"></span><br>
+                        <button onclick=" clearContact()" class="checkout-button"> Clear Fields</button>
+                        <button class="checkout-button-disable">Save Changes</button>
+                    </div>
+
+                </div>
+                <div class="right-pane">
+                    <div class="checkout-box">
+                        <p class="checkout-title">Order Summary</p>
+                        <div class="summary">
+                            Reference: #0096703
+                        </div>
+                        <div class="summary">
+                            Order Items
+                        </div>
+                        <div class="cart" id="basket1">
+                            <!-- Basket items will be added here -->
+                        </div>
+                        <div class="cart" id="total1">Total: $0</div>
+                        <button onclick="resetall()" class="checkout-button">Reset Form</button>
+                        <button onclick="placeorder()" class="checkout-button">Place Order</button>
+                    </div>
+                    <button class="checkout-button" id="back-to-shop" onclick="backtoshop()">Back to shop</button>
+                </div>
+
+            </div>
+
+
+        </form>
+        <div class="panes" id="cart-box">
+            <div class="left-pane1">
+
+                <div class="product-item option1" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <!--To reset the scale of the image according to the onmouseover and onmouseout event-->
+                    <img src="../images/oceanic_pen.png" alt="Ocean Themed pen">
+                    <p>Ocean Themed pen</p>
+                    <p><b>$1.00</b></p>
+                    <label for="quantity1">Quantity:</label>
+                    <input type="number" id="quantity1" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Ocean Themed pen', 1, 'quantity1')">Add to
+                        Cart</button> <!--Calling the addToBasket function with three arguments to the onclick event-->
+                </div>
+                <div class="product-item option1" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/water_bottle.png" alt="Reusable water bottle">
+                    <p>Reusable water bottle</p>
+                    <p><b>$5.00</b></p>
+                    <label for="quantity2">Quantity:</label>
+                    <input type="number" id="quantity2" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('Reusable water bottle', 5, 'quantity2')">Add to Cart</button>
+
+                </div>
+                <div class="product-item option1" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/underwater_view.png" alt="underwater view">
+                    <p>Printed underwater image</p>
+                    <p><b>$1.00</b></p>
+                    <label for="quantity3">Quantity:</label>
+                    <input type="number" id="quantity3" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('Printed underwater image', 1, 'quantity3')">Add to Cart</button>
+                </div>
+
+
+                <div class="product-item option5" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Oceanic_Fragrances.png" alt="Oceanic Fragrances">
+                    <p>Oceanic Fragrances</p>
+                    <p><b>$10.00</b></p>
+                    <label for="quantity4">Quantity:</label>
+                    <input type="number" id="quantity4" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Oceanic Fragrances', 10, 'quantity4')">Add
+                        to
+                        Cart</button>
+                </div>
+                <div class="product-item option3" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/seaweed_crisps.png" alt="seaweed crisps">
+                    <p>seaweed crisps</p>
+                    <p><b>$3.00</b></p>
+                    <label for="quantity5">Quantity:</label>
+                    <input type="number" id="quantity5" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('seaweed crisps', 3, 'quantity5')">Add to
+                        Cart</button>
+                </div>
+                <div class="product-item option6" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/DIY_neckless.png" alt="DIY neckless">
+                    <p>DIY neckless</p>
+                    <p><b>$2.00</b></p>
+                    <label for="quantity6">Quantity:</label>
+                    <input type="number" id="quantity6" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('DIY SeaBloom Necklace', 2, 'quantity6')">Add to Cart</button>
+                </div>
+
+                <div class="product-item option4" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/DIY_OceanTerrariumKit.png" alt="MermaidGarden DIY Kit">
+                    <p>MermaidGarden DIY Kit</p>
+                    <p><b>$12.00</b></p>
+                    <label for="quantity7">Quantity:</label>
+                    <input type="number" id="quantity7" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('MermaidGarden DIY Kit', 12, 'quantity7')">Add to
+                        Cart</button>
+                </div>
+                <div class="product-item option6" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Eco_friendlyBeach_Bags.png" alt="TideTurner Beach Totes">
+                    <p>TideTurner Beach Totes</p>
+                    <p><b>$26.00</b></p>
+                    <label for="quantity14">Quantity:</label>
+                    <input type="number" id="quantity14" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('TideTurner Beach Totes', 26, 'quantity14')">Add to Cart</button>
+
+                </div>
+                <div class="product-item option4" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Seashell_Home_Decor.png" alt="Seashell Home Decor">
+                    <p>Seashell Home Decor</p>
+                    <p><b>$6.00</b></p>
+                    <label for="quantity9">Quantity:</label>
+                    <input type="number" id="quantity9" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Seashell Home Decor', 6, 'quantity9')">Add
+                        to
+                        Cart</button>
+                </div>
+
+
+
+                <div class="product-item option5" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Ocean-themedsoap.png" alt="Ocean Breeze Soap">
+                    <p>Ocean Breeze Soap</p>
+                    <p><b>$4.00</b></p>
+                    <label for="quantity10">Quantity:</label>
+                    <input type="number" id="quantity10" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Ocean Breeze Soap', 4, 'quantity10')">Add
+                        to Cart</button>
+                </div>
+                <div class="product-item option4" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Oceanic_WallArt.png" alt="Ocean Symphony Canva">
+                    <p>Ocean Symphony Canva</p>
+                    <p><b>$32.00</b></p>
+                    <label for="quantity11">Quantity:</label>
+                    <input type="number" id="quantity11" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('Ocean Symphony Canva', 32, 'quantity11')">Add to Cart</button>
+                </div>
+                <div class="product-item option1" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/diary.png" alt="Coral Cove Chronicle">
+                    <p>Coral Cove Chronicle</p>
+                    <p><b>$7.00</b></p>
+                    <label for="quantity12">Quantity:</label>
+                    <input type="number" id="quantity12" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('Coral Cove Chronicle', 7, 'quantity12')">Add to Cart</button>
+                </div>
+
+
+                <div class="product-item option6" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/OceanicShimmerEarrings.png" alt="Oceanic Shimmer Earrings">
+                    <p>Oceanic Shimmer Earrings</p>
+                    <p><b>$12.00</b></p>
+                    <label for="quantity13">Quantity:</label>
+                    <input type="number" id="quantity13" class="quantity-input" value="1" min="1">
+                    <br>
+                    <button class="add-to-cart-button"
+                        onclick="addToBasket('Oceanic Shimmer Earrings', 12, 'quantity13')">Add to
+                        Cart</button>
+                </div>
+                <div class="product-item option2" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/Unisex.png" alt="Oceanic Unity Tee">
+                    <p>Oceanic Unity Tee</p>
+                    <p><b>$22.00</b></p>
+                    <label for="quantity8">Quantity:</label>
+                    <input type="number" id="quantity8" class="quantity-input" value="1" min="1">
+                    <br>
+                    <div class="size-options">
+                        <input type="radio" name="size" value="UK 6">S
+                        <input type="radio" name="size" value="UK 8">M
+                        <input type="radio" name="size" value="UK 10">L
+
+                    </div>
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Oceanic Unity Tee', 22, 'quantity8')">Add
+                        to
+                        Cart</button>
+                </div>
+
+                <div class="product-item option2" onmouseover="popImage(this)" onmouseout="reset(this)">
+                    <img src="../images/AquaAuraDress.png" alt="Aqua Aura Dress">
+                    <p>Aqua Aura Dress</p>
+                    <p><b>$35.00</b></p>
+                    <label for="quantity15">Quantity:</label>
+                    <input type="number" id="quantity15" class="quantity-input" value="1" min="1">
+                    <br>
+                    <div class="size-options">
+                        <input type="radio" name="size" value="UK 6">S
+                        <input type="radio" name="size" value="UK 8">M
+                        <input type="radio" name="size" value="UK 10">L
+
+                    </div>
+                    <br>
+                    <button class="add-to-cart-button" onclick="addToBasket('Aqua Aura Dress', 35, 'quantity15')">Add
+                        toCart</button><br>
+                    <br>
+                   
+
+                </div>
+                <div class="footerspace"></div>
+                <div class="footerspace"></div>
+                <div class="footerspace"></div>
+            </div>
+
+            <div class="right-pane">
+                <div id="frame-rightpane">
+                    <div class="cart">
+                        <h3>Your Cart</h3>
+                        <div class="cart" id="basket">
+                            <!-- Basket items will be added here -->
+                        </div>
+                        <div class="cart" id="total">Total: $0</div>
+                        <button onclick="clearAllItems()" class="cart" id="clear-items">Clear All Items</button>
+                        <br>
+                        <label class="cart">Name:</label><input class="cart" type="text">
+                        <br>
+                        <label class="cart">Email:</label><input class="cart" type="text">
+                        <br>
+                        <input class="cart" type="checkbox">Express Delievery
+                        <br>
+                        <button id="checkout" onclick="checkout()">check out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/shop.js"></script>
+    <script src="../js/validate.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+        <a href="#" id="back-to-top">back to top</a> <!--Back to top button-->
+    </footer>
+
+</body>
+
+</html>

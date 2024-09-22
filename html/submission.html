@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Below Water</title>
+<link rel="stylesheet" href="../css/submission.css">
+<link rel="stylesheet" href="../css/Navigation.css">
+</head>
+<body>
+  <nav>
+    <b><a href="home.html" class="active">Home</a></b>
+    <b><a href="team.html">About Us</a></b>
+    <b><a href="shop.html">Shop</a></b>
+    <b><a href="feedback.html">Feedback</a></b>
+    <b><a href="gallery.html">Gallery</a></b>
+    <b><a href="sitemap.html">Sitemap</a></b>
+    <b><a href="profile.html">Contact us</a></b>
+</nav>
+  <div class="body">
+      <h1>Submission Details</h1>
+      <div id="submissionDetails">
+        
+      </div>
+      <div id="successMessage" style="display: none; color: green;">Successfully Submitted!</div>
+  </div>
+  <div class="foot">
+      <footer>
+        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+      </footer>
+  </div>
+<script>
+  
+  const queryString = window.location.search.substring(1);
+  const params = new URLSearchParams(queryString);
+
+  const name = params.get('name');
+  const email = params.get('email');
+  const rating = params.get('rating');
+  const comment = params.get('comment');
+  const successParam = params.get('success');
+
+  
+  const submissionDetailsDiv = document.getElementById('submissionDetails');
+  const submissionDetailsContent = `
+    <div>
+      <strong>Name:</strong> ${name}
+    </div>
+    <div>
+      <strong>Email:</strong> ${email || 'N/A'}
+    </div>
+    <div>
+      <strong>Rating:</strong> ${rating}
+    </div>
+    <div>
+      <strong>Comment:</strong> ${comment}
+    </div>
+    `;
+    
+    
+  submissionDetailsDiv.innerHTML = submissionDetailsContent;
+  const successMessage = document.getElementById('successMessage');
+    
+  
+</script>
+
+
+</body>
+</html>
+
+

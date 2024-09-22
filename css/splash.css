@@ -1,0 +1,98 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url("../images/underwatersea.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Container to help center the child div */
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100%;
+  position: relative;
+  /* Allows for positioning other elements absolutely within it */
+}
+
+/* The centered div box */
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  /*To write the content top - bottom*/
+  width: 600px;
+  height: 600px;
+  max-height: 90%;
+  min-width: 40%;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  /* Adjust border radius as needed */
+  box-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #fff,
+    0 0 70px #fff;
+}
+
+#box,
+#logo,
+#title,
+#mission,
+#group,
+#mission,
+#names {
+  display: none;
+
+}
+
+#logo {
+  border: 3px solid #fff;
+}
+
+.topic {
+  color: #fff;
+  /* Text color */
+  font-family: Arial, sans-serif;
+  /* Font family */
+  font-size: 40px;
+  /* Font size - 10% of viewport width */
+  text-transform: uppercase;
+  /* Capitalize text */
+  font-weight: bold;
+  /* Bold font */
+  text-align: center;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.733),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+h2,
+p {
+  color: #fff;
+  /* Text color */
+  font-family: Arial, sans-serif;
+  /* Font family */
+  font-weight: bold;
+  /* Bold font */
+  font-size: 23px;
+
+}
+
+#mission {
+  font-size: 30px;
+  text-align: center;
+}
+
+#group {
+  color: rgb(255, 255, 255);
+}

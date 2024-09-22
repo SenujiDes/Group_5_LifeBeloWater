@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Sitemap</title>
+<link rel="stylesheet" href="../css/sitemap.css">
+</head>
+<body>
+  <h1 id="heading">SITEMAP</h1>
+
+  <svg id="sitemap" role="img" aria-label="Website Sitemap" viewBox="0 0 300 130">
+    <!-- Nodes -->
+    <a href="home.html">
+      <rect id="rec0" x="133" y="20" width="35" height="16" aria-label="Parent Page 1"></rect>
+      <text id="text1" x="150" y="30">HOME</text>
+    </a>
+    
+    <a href="shop.html">
+      <rect id="rec1" x="35" y="80" width="35" height="16" aria-label="Child Page 1"></rect>
+      <text id="text2" x="50" y="91">SHOP</text>
+
+    </a>
+    <a href="gallery.html">
+      <rect id="rec2" x="85" y="95" width="35" height="16" aria-label="Child Page 1"></rect>
+      <text id="text3" x="103" y="106">GALLERY</text>
+
+    </a>
+    <a href="profile.html">
+      <rect id="rec3" x="129" y="80" width="46" height="16" aria-label="Child Page 1"></rect>
+      <text id="text4" x="152" y="91">USER PROFILE</text>
+    </a>
+    <a href="feedback.html">
+      <rect id="rec4" x="185" y="95" width="35" height="16" aria-label="Child Page 1"></rect>
+      <text id="text5" x="203" y="106">FEEDBACK</text>
+
+    </a>
+    <a href="team.html">
+      <rect id="rec5" x="235" y="80" width="36" height="16" aria-label="Child Page 1"></rect>
+      <text id="text6" x="253" y="90">TEAM</text>
+
+    </a>
+    
+    
+    <!-- Branches -->
+    <line x1="49" y1="50" x2="251" y2="50" stroke="#000000" stroke-width="2"></line>
+    <line x1="150" y1="80" x2="150" y2="36" stroke="#000000" stroke-width="2"></line>
+    <line x1="50" y1="80" x2="50" y2="50" stroke="#000000" stroke-width="2"></line>
+    <line x1="100" y1="50" x2="100" y2="95" stroke="#000000" stroke-width="2"></line>
+    <line x1="200" y1="50" x2="200" y2="95" stroke="#000000" stroke-width="2"></line>
+    <line x1="250" y1="80" x2="250" y2="50" stroke="#000000" stroke-width="2"></line>
+
+    
+
+  </svg>
+  <footer>
+    <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+   
+</footer>
+  
+<script>
+  const rects = document.querySelectorAll('rect');
+
+// Add event listeners for mouseenter and mouseleave
+rects.forEach(rect => {
+  rect.addEventListener('mouseenter', function() {
+    rect.style.fill = 'rgb(10, 117, 141)'; // Change fill color on mouse enter
+  });
+
+  rect.addEventListener('mouseleave', function() {
+    rect.style.fill = 'rgb(176, 222, 238)'; // Change fill color back on mouse leave
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('heading');
+    const svgMap = document.getElementById('sitemap');
+
+    header.classList.remove('hidden');
+    header.classList.add('pop-up');
+
+    svgMap.classList.remove('hidden');
+    svgMap.classList.add('pop-up');
+  });
+
+  document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      const href = this.getAttribute('href');
+      if (href === 'Dashin1.html' || href === 'gallery.html' || href === 'shop.html') {
+        const header = document.getElementById('heading');
+        const svgMap = document.getElementById('sitemap');
+        
+        header.classList.remove('pop-up');
+        header.classList.add('hidden');
+        
+        svgMap.classList.remove('pop-up');
+        svgMap.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

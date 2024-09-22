@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.shop-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.title {
+    background-size: cover;
+    animation: changeBackground 20s infinite;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+/*To transist images through a time */
+@keyframes changeBackground {
+    0% {
+        background-image: url('../images/seaplant.jpg');
+    }
+
+    20% {
+        background-image: url('../images/turtle.jpg');
+    }
+
+    40% {
+        background-image: url('../images/seashells.jpg');
+    }
+
+    60% {
+        background-image: url('../images/fish.jpg');
+    }
+
+    80% {
+        background-image: url('../images/corals.jpg');
+    }
+
+    100% {
+        background-image: url('../images/underwater.jpg');
+    }
+}
+
+
+.shop-title {
+    margin-top: 200px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+
+
+}
+
+.shop-page-for {
+    margin-bottom: 170px;
+    text-align: justify;
+    padding: 40px;
+    font-size: 27px;
+}
+
+.about-page {
+    background-color: rgba(12, 0, 0, 0.4);
+    /* relavent color with 40% opacity~(0.4) is to indicate the opacity level */
+    border-radius: 20px;
+}
+
+#filterSelect {
+    /*Filter Options*/
+    font-size: 18px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the options within the select element */
+#filterSelect option {
+    font-size: 16px;
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+
+#filterSelect option:hover {
+    background-color: #ddd;
+}
+
+
+
+.checkout-title {
+    background-color: rgba(228, 230, 231, 0.97);
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.checkout-box {
+    background-color: #e0dfdf;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+
+    /* 3D effect */
+    transform-style: preserve-3d;
+    /*indicates that its children should be positioned in the 3D space*/
+    perspective: 1000px;
+}
+
+.checkout-box:hover {
+    transform: rotateY(10deg);
+    /*removing the rotating effect , when the cursor is hovering over the checkout-box*/
+}
+
+.checkout-label {
+    display: block;
+    color: #fff;
+}
+
+.checkout-input {
+    width: 200px;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #c1c1c1;
+    color: #000000;
+}
+
+
+
+.checkout-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #02032c;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.checkout-button-disable {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #85a1c8;
+    color: #fff;
+
+}
+
+.checkout-button:hover {
+    background-color: #85a1c8;
+}
+
+.red {
+    color: red;
+    /*Astric Mark*/
+}
+
+
+.panes2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.panes {
+    flex-grow: 1;
+    display: flex;
+
+}
+
+.left-pane,
+.right-pane {
+    padding: 20px;
+    border: 1px solid #ffffff;
+    background-color: rgb(255, 255, 255);
+    /* Pink color for both panes */
+}
+
+.left-pane {
+    border-right: none;
+    /* Remove right border for left pane */
+    flex-basis: 75%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-pane {
+    flex-basis: 25%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.left-pane1 {
+    display: grid;
+    flex-basis: 75%;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns with equal width (each of them taking up  an equal fraction of the space.*/
+
+}
+
+.left-pane1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.images-rows {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.images-rows img {
+    width: calc(33.33% - 10px);
+    /* To fit 3 images per row with margin */
+}
+
+.product-item {
+
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+
+}
+
+.product-item img {
+    width: 100%;
+    height: 30vw;
+    display: block;
+    border-radius: 8px;
+
+}
+
+
+#frame-rightpane {
+    border: 5px solid rgb(7, 0, 33);
+}
+
+.cart {
+    margin-bottom: 20px;
+}
+
+.add-to-cart-button,
+#clear-items,
+#checkout {
+
+    border: none;
+    background-color: rgb(13, 1, 41);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin-left: 5px;
+    /* Add some space between quantity text and input */
+}
+
+
+
+#basket,
+#basket1 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.basket-item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.remove-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#total {
+    font-weight: bold;
+}
+
+
+#box {
+    display: none;
+}
+
+
+#back-to-shop {
+    width: 150px;
+    align-content: center;
+}
+
+.error {
+    /*Displaying the error messahe*/
+    color: rgb(216, 4, 4);
+
+}
+
+#back-to-top {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s, color 3s;
+    /*to get a smooth transition*/
+}
+
+#back-to-top:hover {
+    background-color: #333333;
+    /*declaring gthe background color on hover*/
+    color: #ffffff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footerspace {
+    height: 100px;
+    width: 100%;
+}
+

@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins' , sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.name{
+    font-size: 70px;
+    white-space: nowrap;
+}
+
+.about img{
+    border: 2px solid #f30a0a;
+    box-shadow: 0 0 5px #f30a0a,
+                0 0 25px #f30a0a;
+    height: auto;
+    width: 300px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    border-radius: 5em;
+    position: absolute; /* Set image to absolute positioning */
+    left: 0; /* Initially positioned at left edge */
+    top: 150px;
+    
+}
+.about img.move-left {
+    left: 300px; /* Move image by margin-left 300px */
+}
+.about img:hover{
+    background: none;
+    color: white;
+    border: 2px solid #f30a0a ;
+    box-shadow: 0 0 5px #f30a0a,
+                0 0 25px  #f30a0a;
+    cursor: pointer;
+    transform: scale(1.1);
+    
+   
+
+}
+.about-text{
+    margin-left: 800%;
+    margin-bottom: 10%;
+    margin-top: 150%;
+    
+}
+.about-text h5{
+    color: white;
+    font-size: 28px;
+    text-transform: 25px;
+    margin-bottom: 1.0em;
+    margin-top: 0.5em;
+    margin-left: 10%;
+}
+.main{
+    width: 90px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.about-text p{
+    color: black ;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 25px;
+    margin-bottom: 45px;
+    visibility: visible;
+    opacity: 1;
+    
+}
+.role{
+    position: relative;
+    display: flex;
+}
+.role h1{
+   position: absolute;
+   top: 600px;
+   left: 500px;
+   white-space: nowrap;
+
+}
+
+.header {
+    position: relative;
+    display: flex;
+}
+.header h1 {
+   position: absolute;
+   top: 800px;
+   left: 450px;
+   white-space: nowrap;
+   font-size: 60px;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    height: 300vh;
+    background: grey;
+    width: 90%;
+   
+}
+.images{
+    display: flex;
+    left: 10px;
+}
+.bmg{
+    
+    height: 500px;
+    width: 100%;
+    border-radius: 3px;
+    transition: .5s;
+    object-fit: fill;
+    justify-content: space-around;
+    
+    
+}
+.gallery{
+    height: 500px;
+    width: 33.3%;
+    margin: 1000px 20px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+    justify-content: space-around; 
+    
+}
+.bmg .gallery{
+    flex:  0 0 33.3%;
+}
+.des{
+    height: 70px;
+    width: 390px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 1430px;
+    background: rgb(27, 27, 27, .5);
+     color: white;
+     transition: .5s;
+}
+h1{
+    margin: 10px;
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+    margin:20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.gallery:hover{
+    cursor: pointer;
+}
+.gallery:hover .des{
+    height:315px;
+    bottom: 110px;;
+    background-color: black;
+}
+.gallery:hover p{
+    opacity: 1;
+    visibility: visible;
+}
+.gallery:hover .bmg{
+    transform: scale(1.1) rotate(-3deg);
+
+}
+.myrole {
+    position: absolute;
+    bottom: -1320px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; 
+    max-width: 50px; 
+    padding: 60px;
+    padding-left: 40px; 
+    padding-right: 80px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 2px solid black;
+    text-align: center;
+    max-width: 1000px;
+    box-sizing: border-box;
+   
+}
+.myrole h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.myrole p {
+    margin: 0;
+   
+    visibility: visible;
+    opacity: 1;
+}
+.myrole span {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.myrole span:hover {
+    background-color: #333;
+}
+
+#back-to-top {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s, color 3s;
+    /*to get a smooth transition*/
+}
+
+#back-to-top:hover {
+    background-color: #333333;
+    /*declaring gthe background color on hover*/
+    color: #ffffff;
+}
+
+
+
+

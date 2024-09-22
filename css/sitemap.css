@@ -1,0 +1,90 @@
+#sitemap{
+  
+   height: auto; 
+   position: fixed;
+   left: 10%;
+   right: 10%;
+   top: 10%;
+   opacity: 0;
+   transform: scale(1.5);
+   transition: opacity 1.5s, transform 1.5s;
+}
+#sitemap.pop-up{
+  /* Add animation properties for pop-up effect */
+  opacity: 1;
+  transform: scale(1);
+}
+#heading{
+
+  text-align: center;
+  position: static;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 50px;
+  color: rgb(10, 117, 141);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1.5s, transform 1.5s;
+}
+#heading.pop-up {
+/* Add animation properties for pop-up effect */
+  opacity: 1;
+  transform: translateY(0);
+}
+.hidden {
+  /* Hide the SVG initially */
+  display: none;
+}
+body{
+  background-image: url('../images/backgroundimg.webp'); /* Specify the path */
+  background-position: center;
+  width: 99%;
+}
+rect {
+  transition: fill 0.3s ease; /* Smooth transition effect */
+}
+#text1,
+#text2,
+#text3,
+#text4,
+#text5,
+#text6 {
+  font-family: Arial, sans-serif; 
+  font-size: 6px; 
+  text-anchor: middle; 
+  font-weight: bolder;
+   
+}
+#rec0,
+#rec1,
+#rec2,
+#rec3,
+#rec4,
+#rec5 {
+  fill: rgb(176, 222, 238); /* Rectangle color */
+  stroke:#97e4f7; /* Rectangle border color */
+  stroke-width: 2;
+    
+     
+}
+line {
+    stroke: #BAF0FD;/* Line color */
+    stroke-width: 2; /* Line width */
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+
+
+
+

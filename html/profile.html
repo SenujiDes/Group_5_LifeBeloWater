@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive User Profile</title>
+    <link rel="stylesheet" href="../css/profile.css">
+</head>  
+    <body background="../images/underwater-landscape-illustration-deep-sea-landscape-with-fish-coral-reef-and-shipwreck-sea-world-silhouette-landscape-for-background-wallpaper-display-or-landing-page-background-vector.jpg">
+        <nav>
+            <b><a href="home.html" class="active">Home</a></b>
+            <b><a href="team.html">About Us</a></b>
+            <b><a href="shop.html">Shop</a></b>
+            <b><a href="feedback.html">Feedback</a></b>
+            <b><a href="gallery.html">Gallery</a></b>
+            <b><a href="sitemap.html">Sitemap</a></b>
+            <b><a href="profile.html">Contact us</a></b>
+    
+         </nav>
+    <h3>USER PROFILE FORM</h3>
+    <div id="progress-bar">
+        <div id="progress"></div>
+        <span id="progress-text">0%</span> <!-- Moved the progress text inside the progress bar -->
+    </div>
+    
+    <button id="start-btn" class="start-button" onclick="startProgress()">Start</button>
+    <div class="container" id="profile-container">
+        <h1>STEP 1 Personal details | Question <span id="question-number">1</span>/5</h1>
+        <div id="profile-output">
+            <!-- Profile information will be displayed here -->
+        </div>
+        <div id="prompt-area">
+            <!-- Prompts will be dynamically generated here -->
+            Enter your name: <input type='text' id='name-input'><br>
+        </div>
+        <button id="skip-btn" onclick="skipPrompt()">Skip</button>
+        <button id="next-btn" onclick="nextPrompt()">Next</button>
+    </div>
+    <button id="step2-btn" class="step2-button" onclick="goToStep2()" style="display:none;">Step 2</button><br>
+    <div class="container" id="volunteering-container">
+        <h1>STEP 2 Volunteer Experience | Question <span id="volunteer-question-number">1</span>/6</h1>
+        <div id="volunteer-output">
+            <!-- Volunteer information will be displayed here -->
+        </div>
+        <div id="volunteer-prompt-area">
+            <!-- Volunteer prompts will be dynamically generated here -->
+            Rational: <input type='text' id='volunteer-input'><br>
+        </div>
+        <button id="volunteer-skip-btn" onclick="skipVolunteerPrompt()">Skip</button>
+        <button id="volunteer-next-btn" onclick="nextVolunteerPrompt()">Next</button>
+    </div>
+    <button id="step3-btn" class="step3-button" onclick="goToStep3()" style="display:none;">Step 3</button><br>
+    <div class="container" id="step3-container">
+        <h1>STEP 3 Qualifications | Question <span id="step3-question-number">1</span>/6</h1>
+        <div id="step3-output">
+            <!-- Additional information will be displayed here -->
+        </div>
+        <div id="step3-prompt-area">
+            <!-- Prompts for Step 3 will be dynamically generated here -->
+            Area of study:  <input type='text' id='area-input'><br>
+        </div>
+        <button id="step3-skip-btn" onclick="skipStep3Prompt()">Skip</button>
+        <button id="step3-next-btn" onclick="nextStep3Prompt()">Next</button>
+    </div>
+    <button id="step4-btn" class="step4-button" onclick="goToStep4()" style="display:none;">Step 4</button><br><br><br>
+    <div class="container" id="step4-container">
+        <h1>STEP 4 Availability and contact | Question <span id="step4-question-number">1</span>/5</h1>
+        <div id="step4-output">
+            <!-- Additional information for Step 4 will be displayed here -->
+        </div>
+        <div id="step4-prompt-area">
+            <!-- Prompts for Step 4 will be dynamically generated here -->
+            Availability for volunteering (min-max):  <input type='text' id='step4-availability-input'><br>
+        </div>
+        <button id="step4-skip-btn" onclick="skipStep4Prompt()">Skip</button>
+        <button id="step4-next-btn" onclick="nextStep4Prompt()">Next</button>
+    </div>
+    <br><br>
+    <script src="../js/Profile.js"></script>
+    <footer class="footer">
+        <p>&copy; 2024 Life Below Water. All rights reserved.</p>
+      
+        <a href="#" id="back-to-top">back to top</a> <!--Back to top button-->
+    </footer>
+</body>
+</html>
